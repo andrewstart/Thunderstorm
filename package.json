@@ -1,0 +1,16 @@
+{
+  "name": "thunderstorm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "encode-audio": "node scripts/encodeAudio.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@pixi/sound": "^4.0.4",
+    "ffmpeg-cli": "^2.7.3",
+    "fs-extra": "^9.0.1"
+  }
+}
