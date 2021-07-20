@@ -408,7 +408,7 @@ loader.load((loader, resources) => {
                     "type": "rect",
                     "data": {
                         "x": 100,
-                        "y": 60,
+                        "y": 50,
                         "w": window.innerWidth - 200,
                         "h": 0
                     }
@@ -521,7 +521,8 @@ window.onresize = () => {
 window.onresize();
 
 // Click on the canvas to trigger
-canvas.addEventListener('mouseup', (e) => {
+canvas.addEventListener('PointerEvent' in window ? 'pointerup' : 'touchend', (e) => {
+    e.preventDefault();
     if (!lightningEmitter) return;
 
     lightningEmitter.emitNow();
